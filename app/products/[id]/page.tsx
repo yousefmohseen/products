@@ -18,7 +18,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
-  const res = await fetch(`https://dummyjson.com/products/${params.id}`);
+  const { id } = await params;
+  const res = await fetch(`https://dummyjson.com/products/${id}`);
   const product = await res.json();
 
   return {
@@ -47,7 +48,7 @@ async function getProduct(id: string): Promise<Product | null> {
 }
 
 export default async function ProductDetailsPage({ params }: { params: { id: string } }) {
-   const { id } = await params;
+  const { id } = await params;
   const product = await getProduct(id);
 
   if (!product) {

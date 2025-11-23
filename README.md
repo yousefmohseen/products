@@ -81,6 +81,7 @@ This project was built as part of a senior-level technical assessment and showca
 app/
  ├─ layout.tsx
  ├─ page.tsx
+ ├─ globals.css
  ├─ products/
  │    ├─ page.tsx
  │    └─ [id]/page.tsx
@@ -88,14 +89,10 @@ app/
  ├─ admin/page.tsx
  ├─ login/page.tsx
  ├─ api/
- │    ├─ reviews/route.ts
- │    └─ ...
+ │    └─ reviews/route.ts
  ├─ logout/route.ts
 
 middleware.ts
-styles/globals.css
-components/
-lib/
 ```
 
 ---
